@@ -1,0 +1,19 @@
+<!-- Include Leaflet JavaScript and CSS -->
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+
+<div id="map" style="height: 100vh;"></div>
+
+<script>
+    var map = L.map('map').setView([0, 0], 15);
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        maxZoom: 19,
+        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+    }).addTo(map);
+
+    function updateLocation(latitude, longitude) {
+        // Update the map with the new location
+        var newLocation = new L.LatLng(latitude, longitude);
+        map.setView(newLocation, 15);
+    }
+</script>
