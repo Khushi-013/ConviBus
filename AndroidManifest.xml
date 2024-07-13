@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest package="com.dapp.app" xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"
+        android:maxSdkVersion="32" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE"/>
+
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+    <application android:allowBackup="false"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name" android:largeHeap="true"
+        android:name="com.dapp.app.appcomponents.di.MyApp"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true" android:theme="@style/Theme.MyApp" android:usesCleartextTraffic="true"
+        android:dataExtractionRules="@xml/data_extraction_rules">
+        <activity
+            android:name="com.dapp.app.modules.registerone.ui.RegisterOneActivity" android:screenOrientation="portrait"/>
+        <activity android:exported="true"
+            android:name="com.dapp.app.modules.splashscreen.ui.SplashScreenActivity" android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.dapp.app.modules.register.ui.RegisterActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.dapp.app.modules.editprofile.ui.EditprofileActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.dapp.app.modules.profile.ui.ProfileActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.dapp.app.modules.busdetails.ui.BusDetailsActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.dapp.app.modules.login.ui.LoginActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.dapp.app.modules.startorstop.ui.StartOrStopActivity" android:screenOrientation="portrait"/>
+        <service android:name="com.dapp.app.appcomponents.utility.location.LocationUpdateService"/>
+    </application>
+</manifest>
