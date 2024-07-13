@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="busDetailsVM" type="com.dapp.app.modules.busdetails.data.viewmodel.BusDetailsVM"/>
+    </data>
+    <LinearLayout android:gravity="center_horizontal"
+        android:id="@+id/linearBusDetails"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStylewhite_A700">
+        <androidx.appcompat.widget.Toolbar
+            android:gravity="center_horizontal"
+            android:id="@+id/toolbarToolbar"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_2pxh"
+            android:layout_width="match_parent" app:contentInsetStart="0dp">
+            <FrameLayout android:id="@+id/frameStackconvibus"
+                android:layout_height="@dimen/_78pxv" android:layout_width="match_parent">
+                <FrameLayout android:id="@+id/frameStack"
+                    android:layout_gravity="top|start"
+                    android:layout_height="@dimen/_69pxv"
+                    android:layout_marginBottom="@dimen/_10pxv"
+                    android:layout_width="@dimen/_358pxh" style="@style/groupStyleindigo_900cornerRadius">
+                    <ImageView android:id="@+id/imageImageNineteen"
+                        android:layout_gravity="start"
+                        android:layout_height="@dimen/_48pxh"
+                        android:layout_marginBottom="@dimen/_10pxv"
+                        android:layout_marginEnd="@dimen/_10pxh"
+                        android:layout_marginStart="@dimen/_8pxh"
+                        android:layout_marginTop="@dimen/_10pxv"
+                        android:layout_width="@dimen/_48pxh"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/img_image18"
+                        tools:ignore="ContentDescription" tools:src="@drawable/img_image18"/>
+                </FrameLayout>
+                <TextView android:id="@+id/txtConviBus"
+                    android:layout_gravity="start"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/_88pxh"
+                    android:layout_marginStart="@dimen/_88pxh"
+                    android:layout_width="wrap_content"
+                    android:text="@{busDetailsVM.busDetailsModel.txtConviBus}"
+                    style="@style/txtInknutAntiquaregular32" tools:text="@string/lbl_convibus"/>
+            </FrameLayout>
+        </androidx.appcompat.widget.Toolbar>
+        <FrameLayout android:id="@+id/frameStackarrival"
+            android:layout_gravity="center_horizontal"
+            android:layout_height="@dimen/_313pxv"
+            android:layout_marginEnd="@dimen/_32pxh"
+            android:layout_marginStart="@dimen/_32pxh"
+            android:layout_marginTop="@dimen/_41pxv" android:layout_width="@dimen/_296pxh">
+            <LinearLayout android:id="@+id/linearColumnarrival"
+                android:layout_gravity="start"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_1pxv"
+                android:layout_width="match_parent"
+                android:orientation="vertical" style="@style/groupStylewhite_A700cornerRadius">
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtArrival"
+                    android:layout_gravity="start"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/_30pxh"
+                    android:layout_marginStart="@dimen/_30pxh"
+                    android:layout_marginTop="@dimen/_92pxv"
+                    android:layout_width="wrap_content"
+                    android:singleLine="true"
+                    android:text="@{busDetailsVM.busDetailsModel.txtArrival}"
+                    style="@style/txtInknutAntiquaregular16_1" tools:text="@string/lbl_arrival"/>
+                <com.google.android.material.textfield.TextInputLayout
+                    android:hint="@string/lbl_arrival2"
+                    android:id="@+id/textInputLayRectangleTen"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/_14pxh"
+                    android:layout_marginStart="@dimen/_14pxh"
+                    android:layout_width="match_parent"
+                    android:textColorHint="@color/black_900" style="@style/txtSolidRoundedOutline_1">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:ellipsize="end"
+                        android:id="@+id/etRectangleTen"
+                        android:inputType="text"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:singleLine="true"
+                        android:text="@={busDetailsVM.busDetailsModel.etRectangleTenValue}"
+                        android:textColor="@color/black_900" android:textSize="@dimen/_12pxh"/>
+                </com.google.android.material.textfield.TextInputLayout>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtDestination"
+                    android:layout_gravity="start"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/_24pxh"
+                    android:layout_marginStart="@dimen/_24pxh"
+                    android:layout_marginTop="@dimen/_30pxv"
+                    android:layout_width="wrap_content"
+                    android:singleLine="true"
+                    android:text="@{busDetailsVM.busDetailsModel.txtDestination}"
+                    style="@style/txtInknutAntiquaregular16_1" tools:text="@string/lbl_destination"/>
+                <com.google.android.material.textfield.TextInputLayout
+                    android:hint="@string/lbl_destination2"
+                    android:id="@+id/textInputLayRectangleEleven"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/_37pxv"
+                    android:layout_marginEnd="@dimen/_14pxh"
+                    android:layout_marginStart="@dimen/_14pxh"
+                    android:layout_width="match_parent"
+                    android:textColorHint="@color/black_900" style="@style/txtSolidRoundedOutline_1">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:ellipsize="end"
+                        android:id="@+id/etRectangleEleven"
+                        android:inputType="text"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:singleLine="true"
+                        android:text="@={busDetailsVM.busDetailsModel.etRectangleElevenValue}"
+                        android:textColor="@color/black_900" android:textSize="@dimen/_12pxh"/>
+                </com.google.android.material.textfield.TextInputLayout>
+            </LinearLayout>
+            <TextView android:ellipsize="end" android:id="@+id/txtBusID"
+                android:layout_gravity="top|start"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_10pxv"
+                android:layout_marginEnd="@dimen/_33pxh"
+                android:layout_marginStart="@dimen/_33pxh"
+                android:layout_width="wrap_content"
+                android:singleLine="true"
+                android:text="@{busDetailsVM.busDetailsModel.txtBusID}"
+                style="@style/txtInknutAntiquaregular16_1" tools:text="@string/lbl_bus_id"/>
+            <com.google.android.material.textfield.TextInputLayout
+                android:hint="@string/lbl_bus_id2"
+                android:id="@+id/textInputLayRectangleSeven"
+                android:layout_gravity="top|center"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_41pxv"
+                android:layout_marginEnd="@dimen/_14pxh"
+                android:layout_marginStart="@dimen/_14pxh"
+                android:layout_marginTop="@dimen/_41pxv"
+                android:layout_width="match_parent"
+                android:textColorHint="@color/black_900" style="@style/txtSolidRoundedOutline_1">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:ellipsize="end"
+                    android:id="@+id/etRectangleSeven"
+                    android:inputType="number"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:singleLine="true"
+                    android:text="@={busDetailsVM.busDetailsModel.etRectangleSevenValue}"
+                    android:textColor="@color/black_900" android:textSize="@dimen/_12pxh"/>
+            </com.google.android.material.textfield.TextInputLayout>
+        </FrameLayout>
+        <FrameLayout android:id="@+id/frameStackrectanglenine"
+            android:layout_gravity="center_horizontal"
+            android:layout_height="@dimen/_53pxv"
+            android:layout_marginBottom="@dimen/_20pxv"
+            android:layout_marginEnd="@dimen/_32pxh"
+            android:layout_marginStart="@dimen/_32pxh"
+            android:layout_marginTop="@dimen/_30pxv" android:layout_width="@dimen/_193pxh">
+            <View
+                android:background="@drawable/rectangle_bg_indigo_900_border_black_900_radius_26"
+                android:id="@+id/viewRectangleNine"
+                android:layout_gravity="start"
+                android:layout_height="@dimen/_52pxv"
+                android:layout_marginBottom="@dimen/_1pxv" android:layout_width="@dimen/_193pxh"/>
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtSUBMIT"
+                android:layout_gravity="center"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_40pxh"
+                android:layout_marginStart="@dimen/_40pxh"
+                android:layout_marginTop="@dimen/_1pxv"
+                android:layout_width="wrap_content"
+                android:singleLine="true"
+                android:text="@{busDetailsVM.busDetailsModel.txtSUBMIT}"
+                style="@style/txtInknutAntiquaregular20_1" tools:text="@string/lbl_submit"/>
+        </FrameLayout>
+    </LinearLayout>
+</layout>

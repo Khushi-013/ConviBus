@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="splashScreenVM" type="com.dapp.app.modules.splashscreen.data.viewmodel.SplashScreenVM"/>
+    </data>
+    <LinearLayout android:gravity="center_horizontal"
+        android:id="@+id/linearSplashScreen"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStylewhite_A700">
+        <ImageView android:id="@+id/imageImageOne"
+            android:layout_gravity="center_horizontal"
+            android:layout_height="@dimen/_187pxh"
+            android:layout_marginEnd="@dimen/_27pxh"
+            android:layout_marginStart="@dimen/_27pxh"
+            android:layout_marginTop="@dimen/_153pxv"
+            android:layout_width="@dimen/_306pxh"
+            android:scaleType="fitXY" cornerRadius="@{@dimen/_93pxh}"
+            imageRes="@{@drawable/img_image1}"
+            tools:ignore="ContentDescription" tools:src="@drawable/img_image1"/>
+        <TextView android:gravity="center_horizontal"
+            android:id="@+id/txtStartyourjour"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_27pxh"
+            android:layout_marginStart="@dimen/_27pxh"
+            android:layout_marginTop="@dimen/_9pxv"
+            android:layout_width="match_parent"
+            android:text="@{splashScreenVM.splashScreenModel.txtStartyourjour}"
+            style="@style/txtInknutAntiquaregular20" tools:text="@string/msg_start_your_jour"/>
+        <TextView android:ellipsize="end"
+            android:gravity="center_horizontal"
+            android:id="@+id/txtTheUltimateBu"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_27pxh"
+            android:layout_marginStart="@dimen/_27pxh"
+            android:layout_marginTop="@dimen/_1pxv"
+            android:layout_width="match_parent"
+            android:singleLine="true"
+            android:text="@{splashScreenVM.splashScreenModel.txtTheUltimateBu}"
+            style="@style/txtInknutAntiquaregular16" tools:text="@string/msg_the_ultimate_bu"/>
+        <FrameLayout android:id="@+id/frameStackrectangleone"
+            android:layout_gravity="center_horizontal"
+            android:layout_height="@dimen/_52pxv"
+            android:layout_marginBottom="@dimen/_20pxv"
+            android:layout_marginEnd="@dimen/_27pxh"
+            android:layout_marginStart="@dimen/_27pxh"
+            android:layout_marginTop="@dimen/_37pxv" android:layout_width="@dimen/_205pxh">
+            <View
+                android:background="@drawable/rectangle_bg_indigo_900_border_black_900_radius_20"
+                android:id="@+id/viewRectangleOne"
+                android:layout_gravity="start"
+                android:layout_height="@dimen/_52pxv"
+                android:layout_marginTop="@dimen/_1pxv" android:layout_width="@dimen/_205pxh"/>
+            <TextView android:ellipsize="end"
+                android:gravity="top|start"
+                android:id="@+id/txtGetStarted"
+                android:layout_gravity="center"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_1pxv"
+                android:layout_marginEnd="@dimen/_38pxh"
+                android:layout_marginStart="@dimen/_39pxh"
+                android:layout_width="match_parent"
+                android:singleLine="true"
+                android:text="@{splashScreenVM.splashScreenModel.txtGetStarted}"
+                style="@style/txtInknutAntiquaregular20_1" tools:text="@string/lbl_get_started"/>
+        </FrameLayout>
+    </LinearLayout>
+</layout>

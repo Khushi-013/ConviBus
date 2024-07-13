@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="loginVM" type="com.dapp.app.modules.login.data.viewmodel.LoginVM"/>
+    </data>
+    <LinearLayout android:id="@+id/linearLogin"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStylewhite_A700">
+        <androidx.appcompat.widget.Toolbar android:gravity="start"
+            android:id="@+id/toolbarToolbar"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent" app:contentInsetStart="0dp">
+            <FrameLayout android:id="@+id/frameStackconvibus"
+                android:layout_height="@dimen/_72pxv" android:layout_width="match_parent">
+                <FrameLayout android:id="@+id/frameStack"
+                    android:layout_gravity="top|start"
+                    android:layout_height="@dimen/_69pxv"
+                    android:layout_marginBottom="@dimen/_10pxv"
+                    android:layout_width="match_parent" style="@style/groupStyleindigo_900cornerRadius">
+                    <ImageView android:id="@+id/imageImageEighteen"
+                        android:layout_gravity="start"
+                        android:layout_height="@dimen/_48pxh"
+                        android:layout_marginBottom="@dimen/_10pxv"
+                        android:layout_marginEnd="@dimen/_17pxh"
+                        android:layout_marginStart="@dimen/_17pxh"
+                        android:layout_marginTop="@dimen/_10pxv"
+                        android:layout_width="@dimen/_48pxh"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/img_image18"
+                        tools:ignore="ContentDescription" tools:src="@drawable/img_image18"/>
+                </FrameLayout>
+                <TextView android:id="@+id/txtConviBus"
+                    android:layout_gravity="center"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/_40pxh"
+                    android:layout_marginStart="@dimen/_40pxh"
+                    android:layout_width="wrap_content"
+                    android:text="@{loginVM.loginModel.txtConviBus}"
+                    style="@style/txtInknutAntiquaregular32" tools:text="@string/lbl_convibus"/>
+            </FrameLayout>
+        </androidx.appcompat.widget.Toolbar>
+        <LinearLayout android:gravity="start"
+            android:id="@+id/linearColumnname"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_32pxh"
+            android:layout_marginStart="@dimen/_32pxh"
+            android:layout_marginTop="@dimen/_47pxv"
+            android:layout_width="match_parent"
+            android:orientation="vertical" style="@style/groupStylewhite_A700cornerRadius">
+            <TextView android:ellipsize="end" android:id="@+id/txtName"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_33pxh"
+                android:layout_marginStart="@dimen/_33pxh"
+                android:layout_marginTop="@dimen/_11pxv"
+                android:layout_width="wrap_content"
+                android:singleLine="true"
+                android:text="@{loginVM.loginModel.txtName}"
+                style="@style/txtInknutAntiquaregular16_1" tools:text="@string/lbl_name"/>
+            <com.google.android.material.textfield.TextInputLayout
+                android:hint="@string/lbl_name2"
+                android:id="@+id/textInputLayRectangleSeven"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_14pxh"
+                android:layout_marginStart="@dimen/_14pxh"
+                android:layout_width="match_parent"
+                android:textColorHint="@color/black_900" style="@style/txtSolidRoundedOutline">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:ellipsize="end"
+                    android:id="@+id/etRectangleSeven"
+                    android:inputType="text"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:singleLine="true"
+                    android:text="@={loginVM.loginModel.etRectangleSevenValue}"
+                    android:textColor="@color/black_900" android:textSize="@dimen/_8pxh"/>
+            </com.google.android.material.textfield.TextInputLayout>
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtPhoneNo"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_33pxh"
+                android:layout_marginStart="@dimen/_33pxh"
+                android:layout_marginTop="@dimen/_8pxv"
+                android:layout_width="wrap_content"
+                android:singleLine="true"
+                android:text="@{loginVM.loginModel.txtPhoneNo}"
+                style="@style/txtInknutAntiquaregular16_1" tools:text="@string/lbl_phone_no"/>
+            <com.google.android.material.textfield.TextInputLayout
+                android:hint="@string/lbl_phone_no2"
+                android:id="@+id/textInputLayRectangleEight"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_42pxv"
+                android:layout_marginEnd="@dimen/_14pxh"
+                android:layout_marginStart="@dimen/_14pxh"
+                android:layout_width="match_parent"
+                android:textColorHint="@color/black_900" style="@style/txtSolidRoundedOutline">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:ellipsize="end"
+                    android:id="@+id/etRectangleEight"
+                    android:inputType="phone"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:singleLine="true"
+                    android:text="@={loginVM.loginModel.etRectangleEightValue}"
+                    android:textColor="@color/black_900" android:textSize="@dimen/_8pxh"/>
+            </com.google.android.material.textfield.TextInputLayout>
+        </LinearLayout>
+        <FrameLayout android:id="@+id/frameStackrectanglenine"
+            android:layout_gravity="center_horizontal"
+            android:layout_height="@dimen/_54pxv"
+            android:layout_marginEnd="@dimen/_32pxh"
+            android:layout_marginStart="@dimen/_32pxh"
+            android:layout_marginTop="@dimen/_50pxv" android:layout_width="@dimen/_193pxh">
+            <View
+                android:background="@drawable/rectangle_bg_indigo_900_border_black_900_radius_26"
+                android:id="@+id/viewRectangleNine"
+                android:layout_gravity="start"
+                android:layout_height="@dimen/_52pxv"
+                android:layout_marginBottom="@dimen/_2pxv" android:layout_width="@dimen/_193pxh"/>
+            <TextView android:ellipsize="end" android:id="@+id/txtLogin"
+                android:layout_gravity="start"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_59pxh"
+                android:layout_marginStart="@dimen/_59pxh"
+                android:layout_marginTop="@dimen/_2pxv"
+                android:layout_width="wrap_content"
+                android:singleLine="true"
+                android:text="@{loginVM.loginModel.txtLogin}"
+                style="@style/txtInknutAntiquaregular20_1" tools:text="@string/lbl_login"/>
+        </FrameLayout>
+        <TextView android:gravity="start"
+            android:id="@+id/txtForgotpassword"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_39pxh"
+            android:layout_marginStart="@dimen/_39pxh"
+            android:layout_marginTop="@dimen/_8pxv"
+            android:layout_width="match_parent"
+            android:text="@{loginVM.loginModel.txtForgotpassword}"
+            style="@style/txtInknutAntiquaregular14" tools:text="@string/msg_forgot_password"/>
+        <TextView android:gravity="start"
+            android:id="@+id/txtConfirmation"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_20pxv"
+            android:layout_marginEnd="@dimen/_39pxh"
+            android:layout_marginStart="@dimen/_39pxh"
+            android:layout_width="match_parent"
+            android:text="@{loginVM.loginModel.txtConfirmation}"
+            style="@style/txtInknutAntiquaregular14" tools:text="@string/msg_don_t_have_an_a"/>
+    </LinearLayout>
+</layout>
